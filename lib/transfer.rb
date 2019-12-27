@@ -14,6 +14,8 @@ def valid?
 end
 
 def execute_transaction
+  if valid? == true
+    
 end
 
 end
