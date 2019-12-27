@@ -29,5 +29,9 @@ end
 p "Transaction rejected. Please check your account balance."
 end
 def reverse_transfer
+ if @status == complete 
+   sender.balance = sender.balance + @amount
+   receiver.balance = receiver.balance - @amount
+ end
 end
 end
