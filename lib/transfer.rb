@@ -6,6 +6,7 @@ def initialize(sender, receiver, amount)
 end
 
 def valid?
+  
 end
 
 def execute_transaction
