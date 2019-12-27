@@ -7,3 +7,5 @@ class BankAccount
 
 
 end
+
+def deposite
