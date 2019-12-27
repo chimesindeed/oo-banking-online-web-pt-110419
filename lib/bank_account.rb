@@ -19,6 +19,7 @@ end
 def valid?
 is_valid = false
 @balance > 0 && @status == "open" ? is_valid = true : is_valid = false
+is_valid
 end
 
 def close_account
