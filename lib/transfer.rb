@@ -14,10 +14,12 @@ def valid?
 end
 
 def execute_transaction
-  if valid? == true
+  one_time_transfer_light = "green"
+  if valid? == true && one_time_transfer_light == "green"
     sender.balance = sender.balance - @amount
     receiver.balance = receiver.balance + @amount
     @status = "complete"
+    one_time_transfer_light = "red"
   end
     
 end
