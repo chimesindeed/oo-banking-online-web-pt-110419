@@ -21,11 +21,12 @@ def execute_transaction
     receiver.balance = receiver.balance + @amount
     @status = "complete"
     @one_time_transfer +=1
-  elsif valid? == false && !(@sender.balance > 0)
+  elsif valid? == false
+  if !(@sender.balance > 0)
   @status = "rejected"
    p "Transaction rejected. Please check your account balance."
   end
-    
+  end
 end
 
 end
