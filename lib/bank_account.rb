@@ -8,4 +8,7 @@ class BankAccount
 
 end
 
-def deposite
+def deposit
+def display_balance
+def valid?
+  
