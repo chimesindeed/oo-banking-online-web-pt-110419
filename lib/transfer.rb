@@ -23,6 +23,7 @@ def execute_transaction
     @one_time_transfer +=1
   elsif valid? == false && @sender.balance !> 0
    p "Transaction rejected. Please check your account balance."
+   @status = "rejected"
 
   end
     
