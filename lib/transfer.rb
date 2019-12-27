@@ -1,12 +1,12 @@
 class Transfer
-  attr_accessor :status, :sender, :receiver, :amount
+  attr_accessor :status, :sender, :receiver, :amount, :one_time_transfer 
 
-one_time_transfer = 1
 def initialize(sender, receiver, amount)
   @status = "pending"
   @sender = sender
   @receiver = receiver
   @amount = amount
+  @one_time_transfer = 1
 end
 
 def valid?
@@ -16,11 +16,11 @@ end
 
 def execute_transaction
   
-  if valid? == true && one_time_transfer == 1
+  if valid? == true && @one_time_transfer == 1
     sender.balance = sender.balance - @amount
     receiver.balance = receiver.balance + @amount
     @status = "complete"
-    one_time_transfer +=1
+    @one_time_transfer +=1
 
   end
     
