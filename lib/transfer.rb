@@ -20,7 +20,7 @@ def execute_transaction
     sender.balance = sender.balance - @amount
     receiver.balance = receiver.balance + @amount
     @status = "complete"
-    one_time_transfer ++
+    one_time_transfer +=1
 
   end
     
